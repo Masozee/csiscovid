@@ -25,7 +25,7 @@ SECRET_KEY = 'n9@!0*w-%y8(va!(x+!acg*x_e=&3rkcr80w=5)xk820h_lkxq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '0cd87e589f1b.ngrok.io']
 
 
 # Application definition
@@ -41,12 +41,15 @@ INSTALLED_APPS = [
     #djangoapp
     'web',
     'users',
+    'covid',
+    'gsheets',
 
     #third party djangoapp
     'rest_framework',
     'tailwind',
     'theme',
     'django_filters',
+    'sslserver',
     
 
 ]
@@ -143,3 +146,7 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 #CONFIG Backend
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
+GSHEETS = {
+    'CLIENT_SECRETS': 'D:\dev\csis\credentials.json'
+}

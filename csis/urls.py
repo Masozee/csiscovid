@@ -8,7 +8,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('web.url') )
+    path('', include('covid.url') ),
+    path('', include('gsheets.urls')),
 ]
 
 if settings.DEBUG:
