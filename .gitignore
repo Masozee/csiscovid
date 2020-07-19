@@ -151,3 +151,5 @@ ngrok.exe
 ngrok-stable-windows-amd64.zip
 .vscode/
 .idea/
+csis/settings.py
+templates/static_src

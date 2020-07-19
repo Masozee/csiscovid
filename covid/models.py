@@ -115,4 +115,3 @@ class index(models.Model):
 
     def __str__(self):
         return str(self.provinsi)
-    

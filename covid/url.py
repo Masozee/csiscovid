@@ -3,4 +3,5 @@ from web import views as webviews
 
 urlpatterns = [
     path('', webviews.Covid, name='covid-depekon'),
+
 ]
