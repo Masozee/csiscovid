@@ -1,3 +1,4 @@
+
 module.exports = {
   purge: [],
   target: 'relaxed',
@@ -5,6 +6,13 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    aspectRatio: {
+      none: 0,
+      square: [1, 1],
+      "16/9": [16, 9],
+      "4/3":  [4, 3],
+      "21/9": [21, 9]
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -18,6 +26,17 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      paradiso: {
+        100: '#ECF3F3',
+        200: '#D0E1E2',
+        300: '#B4CFD0',
+        400: '#7BABAC',
+        500: '#438789',
+        600: '#3C7A7B',
+        700: '#285152',
+        800: '#1E3D3E',
+        900: '#142929',
+        },
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -245,6 +264,8 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
+        'Anton',
+        '"Open Sans"',
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
@@ -624,6 +645,7 @@ module.exports = {
     },
   },
   variants: {
+    aspectRatio: ['responsive'],
     accessibility: ['responsive', 'focus'],
     alignContent: ['responsive'],
     alignItems: ['responsive'],
@@ -723,5 +745,8 @@ module.exports = {
     transitionDelay: ['responsive'],
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+      require("tailwindcss-aspect-ratio"),
+      require("tailwindcss-aspect-ratio"),
+  ],
 }

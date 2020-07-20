@@ -22,7 +22,7 @@ admin.site.register(kabkot, KotaAdmin)
 
 class PanganAdmin (admin.ModelAdmin):
     ordering = ['tanggal']
-    list_display = ['komoditas','tanggal', 'harga']
+    list_display = ['komoditas','tanggal', 'provinsi', 'harga']
     list_filter = (['komoditas', 'tanggal', 'harga'])
     search_fields = []
     list_per_page = 25
