@@ -264,11 +264,11 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
-        'Anton',
-        '"Open Sans"',
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      anton:['Anton'],
+      Os:['"Open Sans"'],
     },
     fontSize: {
       xs: '0.75rem',

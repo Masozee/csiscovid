@@ -34,5 +34,3 @@ def provinsidetail(request, Provinsi_slug):
     }
 
     return render(request, 'covid/provinsi.html', context)
-
-    return
