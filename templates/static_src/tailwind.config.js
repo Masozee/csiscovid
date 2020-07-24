@@ -269,6 +269,10 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       anton:['Anton'],
       Os:['"Open Sans"'],
+      ssp:['"Source Sans Pro"'],
+      nunito: ['"Nunito Sans"'],
+      mulish:['Mulish'],
+
     },
     fontSize: {
       xs: '0.75rem',

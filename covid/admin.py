@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Provinsi, kabkot, index, hargapangan, covid19provinsi
+from .models import Provinsi, kabkot, index, hargapangan, covid19provinsi, ArtikelCov
 
 
 # Register your models here.
@@ -46,3 +46,12 @@ class IndexAdmin (admin.ModelAdmin):
     list_per_page = 25
 
 admin.site.register(index, IndexAdmin)
+
+class ArtikelAdmin (admin.ModelAdmin):
+    ordering = ['tanggal']
+    list_display = ['tanggal','judul', 'authors',]
+    list_filter = (['authors'])
+    search_fields = ['judul']
+    list_per_page = 25
+
+admin.site.register(ArtikelCov, ArtikelAdmin)

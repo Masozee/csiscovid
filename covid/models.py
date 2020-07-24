@@ -1,6 +1,9 @@
 from django.db import models
 import datetime
 from django.utils.text import slugify
+from django.utils.translation import ugettext_lazy as _
+from taggit.managers import TaggableManager
+from taggit.models import TagBase, GenericTaggedItemBase, TaggedItemBase
 from gsheets import mixins
 from uuid import uuid4
 
@@ -115,3 +118,51 @@ class index(models.Model):
 
     def __str__(self):
         return str(self.provinsi)
+
+
+class Author(TagBase):
+    ket = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = _("Author")
+        verbose_name_plural = _("Author")
+
+class TaggedAuthor(GenericTaggedItemBase):
+    tag = models.ForeignKey(
+        Author,
+        on_delete=models.PROTECT,
+        related_name="%(app_label)s_%(class)s_items",
+    )
+    class Meta:
+        verbose_name = _("Author")
+        verbose_name_plural = _("Author")
+
+
+class ArtikelCov(models.Model):
+    judul = models.CharField(max_length=70)
+    slug =models.SlugField(default='', editable=False, max_length=140)
+    tanggal = models.DateField()
+    authors = TaggableManager(through=TaggedAuthor, related_name='abstracts', verbose_name='Author')
+    image = models.URLField(blank=True)
+    file = models.URLField(blank=True)
+    keterangan = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = ("Artikel")
+        verbose_name_plural = ("Artikel")
+
+    def __str__(self):
+        return self.judul
+
+    def save(self, *args, **kwargs):
+        value = self.judul
+        self.slug = slugify(value, allow_unicode=True)
+        super().save(*args, **kwargs)
+
+
+class Subscribe(models.Model):
+    email = models.EmailField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email

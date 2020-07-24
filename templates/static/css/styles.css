@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&family=Mulish:wght@800&family=Nunito+Sans:wght@700&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -6451,6 +6451,18 @@ video {
 
 .font-Os{
   font-family: "Open Sans";
+}
+
+.font-ssp{
+  font-family: "Source Sans Pro";
+}
+
+.font-nunito{
+  font-family: "Nunito Sans";
+}
+
+.font-mulish{
+  font-family: Mulish;
 }
 
 .font-hairline{
@@ -25999,6 +26011,18 @@ video {
 
   .sm\:font-Os{
     font-family: "Open Sans";
+  }
+
+  .sm\:font-ssp{
+    font-family: "Source Sans Pro";
+  }
+
+  .sm\:font-nunito{
+    font-family: "Nunito Sans";
+  }
+
+  .sm\:font-mulish{
+    font-family: Mulish;
   }
 
   .sm\:font-hairline{
@@ -45550,6 +45574,18 @@ video {
     font-family: "Open Sans";
   }
 
+  .md\:font-ssp{
+    font-family: "Source Sans Pro";
+  }
+
+  .md\:font-nunito{
+    font-family: "Nunito Sans";
+  }
+
+  .md\:font-mulish{
+    font-family: Mulish;
+  }
+
   .md\:font-hairline{
     font-weight: 100;
   }
@@ -65099,6 +65135,18 @@ video {
     font-family: "Open Sans";
   }
 
+  .lg\:font-ssp{
+    font-family: "Source Sans Pro";
+  }
+
+  .lg\:font-nunito{
+    font-family: "Nunito Sans";
+  }
+
+  .lg\:font-mulish{
+    font-family: Mulish;
+  }
+
   .lg\:font-hairline{
     font-weight: 100;
   }
@@ -84646,6 +84694,18 @@ video {
 
   .xl\:font-Os{
     font-family: "Open Sans";
+  }
+
+  .xl\:font-ssp{
+    font-family: "Source Sans Pro";
+  }
+
+  .xl\:font-nunito{
+    font-family: "Nunito Sans";
+  }
+
+  .xl\:font-mulish{
+    font-family: Mulish;
   }
 
   .xl\:font-hairline{
