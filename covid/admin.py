@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Provinsi, kabkot, index, hargapangan, covid19provinsi, ArtikelCov
+from .models import Provinsi, kabkot, index, hargapangan, covid19provinsi, ArtikelCov, topikArtikel, Author
 
 
 # Register your models here.
@@ -55,3 +55,7 @@ class ArtikelAdmin (admin.ModelAdmin):
     list_per_page = 25
 
 admin.site.register(ArtikelCov, ArtikelAdmin)
+
+admin.site.register(topikArtikel)
+
+admin.site.register(Author)

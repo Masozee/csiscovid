@@ -137,14 +137,27 @@ class TaggedAuthor(GenericTaggedItemBase):
         verbose_name = _("Author")
         verbose_name_plural = _("Author")
 
+class topikArtikel(models.Model):
+    nama = models.CharField(max_length=30)
+    keterangan = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = ("Topik")
+        verbose_name_plural = ("Topik")
+
+    def __str__(self):
+        return self.nama
+
 
 class ArtikelCov(models.Model):
     judul = models.CharField(max_length=70)
     slug =models.SlugField(default='', editable=False, max_length=140)
     tanggal = models.DateField()
+    topik = models.ForeignKey(topikArtikel, on_delete=models.CASCADE)
     authors = TaggableManager(through=TaggedAuthor, related_name='abstracts', verbose_name='Author')
     image = models.URLField(blank=True)
     file = models.URLField(blank=True)
+    tag = TaggableManager()
     keterangan = models.TextField(blank=True)
 
     class Meta:
