@@ -16,6 +16,9 @@ from .forms import EmailSignupForm
 
 
 # Create your views here.
+def Count(request):
+    return render(request, 'countdown.html')
+
 def Covid(request):
     return render(request, 'covid/index.html')
 

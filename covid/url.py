@@ -3,7 +3,8 @@ from covid import views as covidviews
 
 
 urlpatterns = [
-    path('', covidviews.Covid, name='covid-depekon'),
+    path('', covidviews.Count, name='cuntdown'),
+    path('home', covidviews.Covid, name='covid-depekon'),
     path('index-mobilitas/', covidviews.indexMobility, name='mobility'),
     path('tingkat-inflasi/', covidviews.inflationRates, name='inflation'),
     path('komoditas/', covidviews.Comodity, name='comodity'),

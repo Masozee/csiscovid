@@ -1,0 +1,58 @@
+
+{% load static %}
+
+{% block css %}
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'css/app.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/count.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+        <div class="account-pages my-5 pt-sm-5" style="background: #005354">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center mb-5">
+                            <a href="{% url 'covid-depekon' %}" class="logo"><img src="{% static 'img/logo/logo.png' %}" alt="" width="80px"></a>
+
+
+                            <h4 class="mt-5 font-weight-bold" style="color: white">COVID-19 Dashboard</h4>
+                            <p style="color: white">Coming Soon</p>
+
+                            <div class="row justify-content-center mt-5">
+                                <div class="col-md-8">
+                                    <div data-countdown="2020/07/28" class="counter-number"></div>
+                                </div> <!-- end col-->
+                            </div> <!-- end row-->
+
+                            <h2 style="color: white">Centre for Strategic and International Studies</h2>
+                            <p style="color: white">Pakarti Centre Building, Jl. Tanah Abang 3 No. 23-27, Jakarta 10160, Indonesia</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+        </div>
+        <!-- end Account pages -->
+{% endblock %}
+
+
+{% block js %}
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+
+
+        <script src="https://unicons.iconscout.com/release/v2.0.1/script/monochrome/bundle.js"></script>
+
+        <!-- Plugins js-->
+        <script src="{% static 'js/jquery-countdown/jquery.countdown.min.js' %}"></script>
+
+        <!-- Countdown js -->
+        <script src="{% static 'js/comingsoon.init.js' %}"></script>
+
+        <script src="assets/js/app.js"></script>
+{% endblock js %}
