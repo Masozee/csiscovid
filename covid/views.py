@@ -54,7 +54,7 @@ def provinsidetail(request, Provinsi_slug):
 
 def ArtikelList(request,):
     artikel = ArtikelCov.objects.all()
-    paginator = Paginator(artikel, 5)
+    paginator = Paginator(artikel, 9)
 
     page = request.GET.get('page')
     try:

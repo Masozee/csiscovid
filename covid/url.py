@@ -3,14 +3,14 @@ from covid import views as covidviews
 
 
 urlpatterns = [
-    path('', covidviews.Count, name='cuntdown'),
+    path('', covidviews.Count, name='countdown'),
     path('home', covidviews.Covid, name='covid-depekon'),
     path('index-mobilitas/', covidviews.indexMobility, name='mobility'),
     path('tingkat-inflasi/', covidviews.inflationRates, name='inflation'),
     path('komoditas/', covidviews.Comodity, name='comodity'),
     path('kontak/', covidviews.kontak, name='kontak'),
     path('artikel/', covidviews.ArtikelList, name='artikel'),
-    path('en/', covidviews.enCovid, name='en-covid-depekon'),
+    path('en/home/', covidviews.enCovid, name='en-covid-depekon'),
     path('en/mobility-index/', covidviews.enindexMobility, name='en-mobility'),
     path('en/inflation-rates/', covidviews.eninflationRates, name='en-inflation'),
     path('en/commodities/', covidviews.enComodity, name='en-comodity'),
