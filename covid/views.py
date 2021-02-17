@@ -22,6 +22,9 @@ def Count(request):
 def Covid(request):
     return render(request, 'covid/index.html')
 
+def survei(request):
+    return render(request, 'covid/survei.html')
+
 def indexMobility(request):
     return render(request, 'covid/mobility.html')
 

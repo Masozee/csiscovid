@@ -4,8 +4,7 @@ from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 from taggit.managers import TaggableManager
 from taggit.models import TagBase, GenericTaggedItemBase, TaggedItemBase
-from gsheets import mixins
-from uuid import uuid4
+
 
 # Create your models here.
 class Provinsi(models.Model):
@@ -179,3 +178,17 @@ class Subscribe(models.Model):
 
     def __str__(self):
         return self.email
+
+class Surveysetting(models.Model):
+    tanggal = models.DateField(auto_now_add=True)
+    persepsi_kebijakan = models.CharField(max_length=1000, blank=True)
+    pengetahuan_kepatuhan = models.CharField(max_length=1000, blank=True)
+    tanggungjawab_sosial = models.CharField(max_length=1000, blank=True)
+    persepsi_kekhawatiran = models.CharField(max_length=1000, blank=True)
+    persepsi_vaksin = models.CharField(max_length=1000, blank=True)
+    dampak_ekonomi = models.CharField(max_length=1000, blank=True)
+    demografi = models.CharField(max_length=1000, blank=True)
+
+
+    def __str__(self):
+        return self.tanggal
