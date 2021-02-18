@@ -180,7 +180,7 @@ class Subscribe(models.Model):
         return self.email
 
 class Surveysetting(models.Model):
-    tanggal = models.DateField(auto_now_add=True)
+    tanggal = models.DateField()
     persepsi_kebijakan = models.CharField(max_length=1000, blank=True)
     pengetahuan_kepatuhan = models.CharField(max_length=1000, blank=True)
     tanggungjawab_sosial = models.CharField(max_length=1000, blank=True)
@@ -188,7 +188,10 @@ class Surveysetting(models.Model):
     persepsi_vaksin = models.CharField(max_length=1000, blank=True)
     dampak_ekonomi = models.CharField(max_length=1000, blank=True)
     demografi = models.CharField(max_length=1000, blank=True)
+    press_release = models.FileField(default='media/')
+    hasil_survey = models.FileField(default='media/')
+    survey_desc = models.CharField(max_length=1000, blank=True)
 
 
     def __str__(self):
-        return self.tanggal
+        return str(self.tanggal)

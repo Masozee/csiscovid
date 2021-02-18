@@ -3,6 +3,22 @@
 
 
 {% block content %}
+          <section class="text-gray-900 bg-gray-300 body-font">
+            <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+              <iframe class="shadow embed-responsive-item vidyout" src="https://www.youtube.com/embed/KLjwZ3O9tDU" frameborder="2"></iframe>
+                <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium font-anton text-gray-900">Persepsi, Efektivitas dan Kepatuhan Masyarakat dalam
+Peneraparan Protokol Kesehatan Covid­19</h1>
+                {% for a in Survei %}
+                <p class="mb-8 leading-relaxed">{{ a.survey_desc }}</p>
+                {% endfor %}
+                    <span class="row">
+                    <a href=""><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Press Release</button></a>
+                    <a href=""><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Laporan Survey</button></a>
+                </span>
+              </div>
+            </div>
+          </section>
           <section class="text-gray-700 body-font overflow-hidden">
               <div class="container px-5 py-12 mx-auto">
                 <div class="lg:w-5/5 mx-auto flex flex-wrap">
@@ -13,7 +29,9 @@
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                       <br>
                     <h1 class="text-gray-900 text-3xl title-font font-anton font-medium mb-1">Persepsi terhadap Kebijakan Penanganan Covid­19</h1>
-                    <p class="leading-relaxed">Grafik perubahan tingkat inflasi bahan makanan dibandingkan dengan tahun sebelumnya.</p>
+                      {% for a in Survei %}
+                      <p class="leading-relaxed">{{ a.persepsi_kebijakan }}</p>
+                      {% endfor %}
                     </div>
                     </div>
                   </div>
@@ -30,7 +48,9 @@
                               <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                               <h1 class="text-gray-900 text-3xl title-font font-medium font-anton mb-1">Pengetahuan dan kepatuhan publik dalam menerapkan protokol kesehatan</h1>
                               <br>
-                              <p class="leading-relaxed">Tingkat inflasi bahan makanan dibandingkan dengan bulan sebelumnya.</p>
+                              {% for a in Survei %}
+                              <p class="leading-relaxed">{{ a.pengetahuan_kepatuhan }}</p>
+                              {% endfor %}
                           </div>
                           <div class='lg:w-2/3 w-full h-64 object-cover object-center rounded bg-gray-200 shadow-2xl chrt' >
                             <iframe src='https://flo.uri.sh/story/768331/embed' title='Interactive or visual content' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/768331/?utm_source=embed&utm_campaign=story/768331' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
@@ -46,11 +66,13 @@
                   <div class='lg:w-2/3 w-full h-64 object-cover object-center rounded bg-gray-200 shadow-2xl chrt' >
                     <iframe src='https://flo.uri.sh/story/768788/embed' title='Interactive or visual content' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/768788/?utm_source=embed&utm_campaign=story/768788' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
                   </div>
-                  <div class="lg:w-1/3 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                  <div class="lg:w-1/3 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 ">
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                       <br>
                     <h1 class="text-gray-900 text-3xl title-font font-anton font-medium mb-1">Tanggung jawab sosial dan COVID-19</h1>
-                    <p class="leading-relaxed">Grafik perubahan tingkat inflasi bahan makanan dibandingkan dengan tahun sebelumnya.</p>
+                      {% for a in Survei %}
+                    <p class="leading-relaxed">{{ a.tanggungjawab_sosial }}</p>
+                      {% endfor %}
                     </div>
                     </div>
                   </div>
@@ -67,7 +89,9 @@
                               <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                               <h1 class="text-gray-900 text-3xl title-font font-medium font-anton mb-1">Persepsi dan kekhawatiran publik terhadap risiko penyebaran COVID-19</h1>
                               <br>
-                              <p class="leading-relaxed">Tingkat inflasi bahan makanan dibandingkan dengan bulan sebelumnya.</p>
+                              {% for a in Survei %}
+                              <p class="leading-relaxed">{{ a.persepsi_kekhawatiran }}</p>
+                              {% endfor %}
                           </div>
                           <div class='lg:w-2/3 w-full h-64 object-cover object-center rounded bg-gray-200 shadow-2xl chrt' >
                             <iframe src='https://flo.uri.sh/story/768802/embed' title='Interactive or visual content' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/768802/?utm_source=embed&utm_campaign=story/768802' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
@@ -87,8 +111,10 @@
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                       <br>
                     <h1 class="text-gray-900 text-3xl title-font font-anton font-medium mb-1">Persepsi terhadap vaksin COVID-19</h1>
-                    <p class="leading-relaxed">Grafik perubahan tingkat inflasi bahan makanan dibandingkan dengan tahun sebelumnya.</p>
-                    </div>
+                      {% for a in Survei %}
+                    <p class="leading-relaxed">{{ a.persepsi_vaksin }}</p>
+                      {% endfor %}
+                  </div>
                     </div>
                   </div>
                 </div>
@@ -104,7 +130,9 @@
                               <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                               <h1 class="text-gray-900 text-3xl title-font font-medium font-anton mb-1">Dampak ekonomi akibat COVID-19</h1>
                               <br>
-                              <p class="leading-relaxed">Tingkat inflasi bahan makanan dibandingkan dengan bulan sebelumnya.</p>
+                              {% for a in Survei %}
+                              <p class="leading-relaxed">{{ a.dampak_ekonomi }}</p>
+                              {% endfor %}
                           </div>
                           <div class='lg:w-2/3 w-full h-64 object-cover object-center rounded bg-gray-200 shadow-2xl chrt' >
                             <iframe src='https://flo.uri.sh/story/768817/embed' title='Interactive or visual content' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/768817/?utm_source=embed&utm_campaign=story/768817' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
@@ -124,7 +152,9 @@
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">CSIS COVID-19 Survey</h2>
                       <br>
                     <h1 class="text-gray-900 text-3xl title-font font-anton font-medium mb-1">Demografi</h1>
-                    <p class="leading-relaxed">Grafik perubahan tingkat inflasi bahan makanan dibandingkan dengan tahun sebelumnya.</p>
+                      {% for a in Survei %}
+                    <p class="leading-relaxed">{{ a.demografi }}</p>
+                      {% endfor %}
                     </div>
                     </div>
                   </div>

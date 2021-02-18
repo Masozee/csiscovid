@@ -7,7 +7,7 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
-from .models import hargapangan, covid19provinsi, Provinsi, ArtikelCov, Subscribe
+from .models import hargapangan, covid19provinsi, Provinsi, ArtikelCov, Subscribe, Surveysetting
 from django.shortcuts import render, Http404, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.conf import settings
@@ -23,7 +23,12 @@ def Covid(request):
     return render(request, 'covid/index.html')
 
 def survei(request):
-    return render(request, 'covid/survei.html')
+    survei = Surveysetting.objects.all()
+    context = {
+        "Survei": survei,
+    }
+
+    return render(request, 'covid/survei.html', context)
 
 def indexMobility(request):
     return render(request, 'covid/mobility.html')
